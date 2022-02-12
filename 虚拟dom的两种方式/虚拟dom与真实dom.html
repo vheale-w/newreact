@@ -8,13 +8,16 @@
   <script type="text/javascript" src="../js/babel.min.js"></script>
 </head>
 <body>
-  <div id="text"></div>
+  <div id="test"></div>
 
   <script type="text/babel">
 		let VDOM = <h1>Hello,React</h1>
 		ReactDOM.render(VDOM,document.getElementById('test'))
 		console.log(typeof VDOM) 
 		console.log(VDOM instanceof Object) 
+    const test = document.getElementById('test')
+    console.log('vdom:',VDOM)
+    console.log('dom:',test)
 
 
   </script>
