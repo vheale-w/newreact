@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="../js/react.development.js" crossorigin></script>
+  <script src="../js/react-dom.development.js" crossorigin></script>
+  <script src="../js/babel.min.js"></script>
+
+</head>
+<body>
+  <div id="test"></div>
+  <div id="test1"></div>
+
+  <script type="text/babel">
+    class Person extends React.Component{
+
+      render(){
+        const {name, sex, age} = this.props
+        
+        return (
+          <ul>
+            <li>姓名:{name}</li>
+            <li>性别:{sex}</li>
+            <li>年龄:{age}</li>
+            </ul>
+        )
+      }
+    }
+    const p1 = {
+      name:'tom',
+      sex:'woman',
+      age:19
+    }
+    ReactDOM.render(<Person name='lx' sex='man' age='18'/>,document.getElementById('test'))
+    ReactDOM.render(<Person {...p1}/>,document.getElementById('test1'))
+    ReactDOM.render(<Person {...p1}/>,document.getElementById('test1'))
+    
+
+  </script>
+  
+
+</body>
+</html>
